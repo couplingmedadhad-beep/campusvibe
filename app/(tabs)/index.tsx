@@ -96,10 +96,10 @@ export default function HomePage() {
 
   const handleVibePress = (vibe: any) => {
     if (vibe.isYourVibe) {
-      router.push('../vibes/Camera');
+      router.push('/vibes/camera');
     } else {
       router.push({
-        pathname: '../vibes/viewer',
+        pathname: '/vibes/viewer',
         params: { storyId: vibe.id, username: vibe.username },
       });
     }
@@ -165,7 +165,9 @@ export default function HomePage() {
                   </View>
                 )}
               </View>
-              <Text style={{ fontSize: 12, color: '#000', textAlign: 'center', fontWeight: '500' }}>{vibe.username}</Text>
+              <Text style={{ fontSize: 12, color: '#000', textAlign: 'center', fontWeight: '500' }}>
+                {vibe.isYourVibe ? 'Your Vibe' : vibe.username}
+              </Text>
             </TouchableOpacity>
           ))}
         </ScrollView>

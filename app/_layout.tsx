@@ -41,7 +41,8 @@ export default function RootLayout() {
   <Stack.Screen name="auth" />
   <Stack.Screen name="events" />
   <Stack.Screen name="notes" />
-<Stack.Screen name="stories" options={{ headerShown: false }} />
+  <Stack.Screen name="vibes" options={{ headerShown: false }} />
+  <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
   <Stack.Screen name="+not-found" />
 </Stack>
 
